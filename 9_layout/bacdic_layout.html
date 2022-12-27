@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">  
+  <title>기본레이아웃 - 가운제 정렬 메뉴 </title>
+  <style>
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .inner {
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+
+    }
+  </style>
+
+  <style>
+
+    /* header */
+    header {
+      width: 100%;
+      background-color: aliceblue;
+    }
+    header > .inner {
+      height: 100px;
+    }
+
+    header h1 {
+      position: absolute;
+      left: 10px;
+      top: 30px;
+    }
+
+
+    /* gnb */
+    header nav.gnb {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    /* 메인메뉴 */
+    header .main-menu {
+      display: flex;
+    }
+
+    header .main-menu > li {
+      position: relative;
+    }
+
+    header .main-menu > li:hover > .sub-menu {
+      display: block;
+    }
+
+    header .main-menu > li > a {
+      padding: 10px 35px;
+    }
+
+
+    /*  서브메뉴  */
+
+    header .sub-menu {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      border: 1px solid rebeccapurple;
+      background-color: antiquewhite;
+      z-index: 1;
+      display: none;
+    }
+
+    header .sub-menu > li > a {
+      padding: 10px 0;
+    }
+
+    header .sub-menu > li:hover {
+      background-color: lightgreen;
+    }
+
+
+    /* lnb */
+
+
+    header nav .lnb {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    header nav .lnb > ul {
+      display: flex;
+    }
+
+
+    /* main */
+    main.inner {
+      display: flex;
+    }
+
+
+    /* footer */
+    footer {
+      width: 100%;
+      background-color: gray;
+    }
+
+    footer > .inner {
+      padding: 30px 0;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- 레이아웃 : 기본은 크게 행으로 자르고 그 안에서 행과 열로 나눔 -->
+  <header>
+    <div class="inner">
+      <h1>기본 레이아웃 구조</h1>
+      <!-- gnb(글로벌네비게이션바) -->
+      <nav class="gnb">
+        <ul class="main-menu">
+          <li><a href="">메인메뉴1</a></li>
+          <li>
+            <a href="">메인2</a>
+          <ul class="sub-menu">
+            <li><a href="">메뉴2 - 서브1</a></li>
+            <li><a href="">메뉴2 - 서브2</a></li>
+            <li><a href="">메뉴2 - 서브3</a></li>
+          </ul>
+        </li>
+          <li><a href="">메인 메뉴3</a></li>
+          <li>
+            <a href="">긴 메인 메뉴4</a>
+            <ul class="sub-menu">
+              <li><a href="">긴 메인 서브1</a></li>
+              <li><a href="">긴 메인 서브2</a></li>
+              <li><a href="">긴 메인 서브3</a></li>
+              <li><a href="">긴 메인 서브4</a></li>
+              <li><a href="">긴 메인 서브5</a></li>
+            </ul>
+          </li>
+          <li><a href="">메인 메뉴5</a></li>
+        </ul>
+      </nav>
+      <!-- lnb(로컬 네비게이션 바 ) -->
+      <nav class="lnb">
+        <ul>
+          <li><a href="">상단메뉴1</a></li>
+          <li><a href="">상단메뉴2</a></li>
+          <li><a href="">상단메뉴3</a></li>
+          <li><a href="">상단메뉴4</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="inner">
+    <section>
+      <article>
+        <h1>제목1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eligendi voluptate c
+          onsectetur odit. Vero maxime, modi accusamus, 
+          debitis, facilis natus nemo similique dolorum cupiditate adipisci
+          obcaecati dicta! Quis, quia odit.</p>
+      </article>
+      <article>
+        <h1>제목2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eligendi voluptate c
+          onsectetur odit. Vero maxime, modi accusamus, 
+          debitis, facilis natus nemo similique dolorum cupiditate adipisci
+          obcaecati dicta! Quis, quia odit.</p>
+      </article>
+      <article>
+        <h1>제목3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eligendi voluptate c
+          onsectetur odit. Vero maxime, modi accusamus, 
+          debitis, facilis natus nemo similique dolorum cupiditate adipisci
+          obcaecati dicta! Quis, quia odit.</p>
+      </article>
+      <article>
+        <h1>제목4</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eligendi voluptate c
+          onsectetur odit. Vero maxime, modi accusamus, 
+          debitis, facilis natus nemo similique dolorum cupiditate adipisci
+          obcaecati dicta! Quis, quia odit.</p>
+      </article>
+      <article>
+        <h1>제목5</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eligendi voluptate c
+          onsectetur odit. Vero maxime, modi accusamus, 
+          debitis, facilis natus nemo similique dolorum cupiditate adipisci
+          obcaecati dicta! Quis, quia odit.</p>
+      </article>
+    </section>
+    <aside>
+      <img src="https://via.placeholder.com/150" alt="img1">
+      <img src="https://via.placeholder.com/150" alt="img2">
+    </aside>
+  </main>
+
+  <footer>
+    <div class="inner">
+      <address>서울시 영등포구</address>
+      <p>&copy;Company. All </p>
+    </div>
+  </footer>
+</body>
+</html>
